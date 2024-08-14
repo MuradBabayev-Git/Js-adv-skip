@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 5, 91);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    overflow: hidden; /* Убирает прокрутку для эффекта */
+}
+
+.message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
+    z-index: 2000; /* Поверх всего остального */
+    transition: opacity 0.5s ease-out;
+}
+
+.red_adv {
+    position: fixed;
+    bottom: -350px; /* Начальное положение за пределами экрана */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 350px;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR6Re_Ztx1q0qnRK3bLgOahgG9Wo_jRyHQww&s);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: start; /* Центрирование вертикально */
+    transition: bottom 0.5s ease-in-out, transform 0.5s ease-in-out; /* Плавное перемещение */
+    z-index: 1000;
+}
+
+.green_close {
+    background-color: green;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* Курсор указывает на кликабельность */
+}
+
+.green_close img {
+    width: 40px;
+    height: 40px;
+}
+
+#countdown {
+    font-size: 24px;
+}
